@@ -21,7 +21,18 @@ body {
   background-color: transparent !important;
 }
 
-/* 侧边栏加一层轻微深色遮罩，保证文字可读 */
+/* ===== 顶部导航栏透明 ===== */
+#topbar {
+  background-color: transparent !important;
+  border-bottom: none !important;
+}
+
+#topbar a,
+#topbar .nav-link {
+  color: #e0e0e0 !important;
+}
+
+/* ===== 侧边栏半透明遮罩，保证文字可读 ===== */
 #sidebar {
   background-color: rgba(0, 0, 0, 0.35) !important;
   backdrop-filter: blur(2px);
@@ -37,7 +48,10 @@ footer a {
   color: #e0e0e0 !important;
 }
 
-/* 页脚内部容器也透明，避免残留色块 */
 footer .footer-content {
+  background-color: transparent !important;
+}
+
+.page-footer {
   background-color: transparent !important;
 }
