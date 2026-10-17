@@ -1,0 +1,19 @@
+--- --- @use 'main
+ {
+    %- if jekyll.environment=='production' -%
+}
+
+.built {
+    %- endif -%
+}
+
+';
+
+
+body {
+    background-image: url('/assets/img/background_pic.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
