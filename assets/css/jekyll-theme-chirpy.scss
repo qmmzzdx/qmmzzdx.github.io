@@ -3,7 +3,7 @@
 
 @use 'main
 {%- if jekyll.environment == 'production' -%}
-  .built
+  .bundle
 {%- endif -%}
 ';
 
