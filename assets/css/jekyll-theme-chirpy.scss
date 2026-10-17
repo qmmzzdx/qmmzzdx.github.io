@@ -16,7 +16,7 @@ html {
   background-attachment: fixed;
 }
 
-/* 让所有中间层透明，使星空图从内容层透出 */
+/* 让所有中间层透明 */
 body,
 body > .container,
 .container {
@@ -40,7 +40,19 @@ body > .container,
   color: #e0e0e0 !important;
 }
 
-/* ===== 侧边栏半透明遮罩，保证文字可读 ===== */
+/* 缩小顶部栏标题字号，避免一行显示不完整 */
+#topbar-title {
+  font-size: 0.85rem !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#breadcrumb {
+  flex-shrink: 0;
+}
+
+/* ===== 侧边栏半透明遮罩 ===== */
 #sidebar {
   background-color: rgba(0, 0, 0, 0.35) !important;
   backdrop-filter: blur(2px);
@@ -64,7 +76,7 @@ footer .footer-content {
   background-color: transparent !important;
 }
 
-/* 内容区容器也透明，避免文章列表下方出现色块 */
+/* 内容区容器透明 */
 #tail-wrapper,
 #post-list,
 #panel-wrapper,
@@ -73,10 +85,14 @@ footer .footer-content {
   background: none !important;
 }
 
-/* 缩小顶部栏标题字号，避免一行显示不完整 */
-#topbar-title {
-  font-size: 0.85rem !important;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+/* 让页脚区域占满整行宽度 */
+#tail-wrapper {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+#tail-wrapper footer {
+  width: 100% !important;
+  max-width: 100% !important;
 }
