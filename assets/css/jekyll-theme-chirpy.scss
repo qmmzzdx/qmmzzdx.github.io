@@ -7,7 +7,7 @@
 {%- endif -%}
 ';
 
-/* 全页面星空背景 */
+/* ===== 全页面星空背景 ===== */
 html {
   background-image: url('/assets/img/background_pic.jpg') !important;
   background-size: cover;
@@ -16,11 +16,28 @@ html {
   background-attachment: fixed;
 }
 
+/* 让 body 透明，使星空图从内容层透出 */
 body {
   background-color: transparent !important;
 }
 
-/* 侧边栏透明，让星空图透出来 */
+/* 侧边栏加一层轻微深色遮罩，保证文字可读 */
 #sidebar {
+  background-color: rgba(0, 0, 0, 0.35) !important;
+  backdrop-filter: blur(2px);
+}
+
+/* ===== 页脚融入星空背景 ===== */
+footer {
+  background-color: transparent !important;
+  color: #e0e0e0 !important;
+}
+
+footer a {
+  color: #e0e0e0 !important;
+}
+
+/* 页脚内部容器也透明，避免残留色块 */
+footer .footer-content {
   background-color: transparent !important;
 }
