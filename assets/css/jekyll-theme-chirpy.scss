@@ -8,10 +8,19 @@
 ';
 
 /* 全页面星空背景 */
-body {
-  background-image: url('/assets/img/background_pic.jpg');
+html {
+  background-image: url('/assets/img/background_pic.jpg') !important;
   background-size: cover;
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body {
+  background-color: transparent !important;
+}
+
+/* 侧边栏透明，让星空图透出来 */
+#sidebar {
+  background-color: transparent !important;
 }
