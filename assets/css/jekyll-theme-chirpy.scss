@@ -16,19 +16,27 @@ html {
   background-attachment: fixed;
 }
 
-/* 让 body 透明，使星空图从内容层透出 */
-body {
+/* 让所有中间层透明，使星空图从内容层透出 */
+body,
+body > .container,
+.container {
   background-color: transparent !important;
+  background: none !important;
 }
 
 /* ===== 顶部导航栏透明 ===== */
+#topbar-wrapper,
 #topbar {
   background-color: transparent !important;
+  background: none !important;
+  box-shadow: none !important;
   border-bottom: none !important;
 }
 
 #topbar a,
-#topbar .nav-link {
+#topbar .nav-link,
+#topbar-title,
+#breadcrumb span {
   color: #e0e0e0 !important;
 }
 
@@ -54,4 +62,13 @@ footer .footer-content {
 
 .page-footer {
   background-color: transparent !important;
+}
+
+/* 内容区容器也透明，避免文章列表下方出现色块 */
+#tail-wrapper,
+#post-list,
+#panel-wrapper,
+.access {
+  background-color: transparent !important;
+  background: none !important;
 }
