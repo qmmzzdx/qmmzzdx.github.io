@@ -72,3 +72,11 @@ footer .footer-content {
   background-color: transparent !important;
   background: none !important;
 }
+
+/* 缩小顶部栏标题字号，避免一行显示不完整 */
+#topbar-title {
+  font-size: 0.85rem !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
