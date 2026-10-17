@@ -1,19 +1,17 @@
---- --- @use 'main
- {
-    %- if jekyll.environment=='production' -%
-}
+---
+---
 
-.built {
-    %- endif -%
-}
-
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .built
+{%- endif -%}
 ';
 
-
+/* 全页面星空背景 */
 body {
-    background-image: url('/assets/img/background_pic.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-image: url('/assets/img/background_pic.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
 }
